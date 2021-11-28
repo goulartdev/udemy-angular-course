@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span class="title">Cook'n'Roll</span>
+  <span class="spacer"></span>
+  <nav>
+    <a mat-flat-button color="primary" href="#" role="button">Recipes</a>
+    <a mat-flat-button color="primary" href="#" role="button">Shopping List</a>
+    <a mat-flat-button color="primary" href="#" role="button" [matMenuTriggerFor]="manageMenu">Manage</a>
+    <mat-menu #manageMenu="matMenu" class="manage-menu">
+      <a mat-flat-button href="#" role="button">Save Data</a>
+      <a mat-flat-button href="#" role="button">Fetch Data</a>
+    </mat-menu>
+  </nav>
+</mat-toolbar>

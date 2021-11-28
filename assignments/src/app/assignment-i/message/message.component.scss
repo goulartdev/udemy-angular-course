@@ -1,0 +1,48 @@
+.message-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 10px;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+    color: black;
+  }
+}
+
+.generic-message {
+  border-color: #444;
+  background: #BBB;
+  color: #444;
+}
+
+.error-message {
+  border-color: #c21e1e;
+  background: #e0a8a8;
+  color: #c21e1e
+}
+
+.warning-message {
+  border-color: #f8c20f;
+  background: #fff7c7;
+  color: #f8c20f;
+}
+
+.success-message {
+  border-color: #296e23;
+  background: #8ffd85;
+  color: #296e23;
+}
+
+.info-message {
+  border-color: #0034dd;
+  background: #69c8ff;
+  color: #0034dd;
+}

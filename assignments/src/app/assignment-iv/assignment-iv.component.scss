@@ -1,0 +1,35 @@
+.instructions {
+  border: 2px solid #999;
+  border-radius: 6px;
+  
+  li {
+    margin: 10px 0;
+  }
+}
+
+.resolution {
+  margin-top: 16px;
+}
+
+.numbers {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 10px 0;
+  }
+
+  app-even, app-odd {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+
+  app-even {
+    background-color: #4d93e4;
+  }
+
+  app-odd {
+    background-color: #d64b4b;
+  }
+}

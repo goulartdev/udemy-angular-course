@@ -1,0 +1,21 @@
+<ol class="instructions">
+  <li>Create two new components: WarningAlert, SuccessAlert</li>
+  <li>Output then beneath each other in the AppComponent</li>
+  <li>Output a warning or success message in the Components</li>
+  <li>Style the components appropriately</li>
+</ol>
+<hr>
+<section class="resolution">
+  <div class="menu">
+    <button (click)="setType('generic')">Generic</button>
+    <button (click)="setType('error')">Error</button>
+    <button (click)="setType('warning')">Warning</button>
+    <button (click)="setType('success')">Success</button>
+    <button (click)="setType('info')">Info</button>
+  </div>
+  <app-message 
+    title="{{ messageType | titlecase }} message" 
+    message="This is an {{ messageType }} message" 
+    [type]="messageType">
+  </app-message>
+</section>

@@ -1,0 +1,54 @@
+.instructions {
+  border: 2px solid #999;
+  border-radius: 6px;
+
+  li {
+    margin: 10px 0;
+  }
+}
+
+.resolution {
+  input {
+    font-size: 16px;
+    width: 200px;
+    height: 32px;
+    margin-top: 10px;
+    padding: 0 10px;
+    border: 2px solid #999;
+    border-radius: 6px;
+    transition: all 0.2s;
+  
+    &:focus {
+      border: 2px solid #2b752b;
+      outline: none;
+    }
+    
+    &:invalid {
+      border: 2px solid red;
+    }
+  }
+  
+  button {
+    width: 80px;
+    height: 32px;
+    background-color: #2b752b;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
+    transition: all 0.2s;
+  
+  
+    &:enabled {
+      cursor: pointer;
+    }
+    
+    &:disabled {
+      background-color: #999;
+    }
+    
+    &:enabled:hover {
+      background-color: #429142;
+    }
+  }
+}

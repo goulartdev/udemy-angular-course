@@ -1,0 +1,20 @@
+<ol class="instructions">
+  <li>Create three new components: GameControl, Odd, Even</li>
+  <li>The GameControl Component should have buttons to start and stop the game</li>
+  <li>when starting the game, an event (holding an incrementing number) should get emitted each second</li>
+  <li>The event should be listenable from outside the component</li>
+  <li>When stopping the game, no more events should get emitted</li>
+  <li>A new Odd component should get created for every odd number emitted, the same should happen for the Even Component</li>
+  <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
+  <li>Style the element holding your output text differently in both components</li>
+</ol>
+<hr>
+<section class="resolution">
+  <app-game-control (onNewNumber)="log($event)"></app-game-control>
+  <ul class="numbers">
+    <li *ngFor="let num of numbers">
+      <app-odd *ngIf="num % 2 !== 0">{{ num }}</app-odd>
+      <app-even *ngIf="num % 2 === 0">{{ num }}</app-even>
+    </li>
+  </ul>
+</section>

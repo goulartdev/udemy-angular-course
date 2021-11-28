@@ -1,0 +1,16 @@
+:host mat-card {
+  width: 20rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.6rem;
+
+  div {
+    width: 100%;
+  }
+
+  img {
+   width: 8rem;
+   object-fit: cover; 
+  }
+
+}

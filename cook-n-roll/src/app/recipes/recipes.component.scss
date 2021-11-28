@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  flex-direction: row;
+
+  app-recipe-list {
+    width: 16rem;
+  }
+}

@@ -1,0 +1,26 @@
+:host {
+  .title, .spacer {
+    margin: 0 16px;
+  }
+
+  a:hover {
+    background-color: #642070;
+  }
+
+  .spacer {
+    height: 60%;
+    border: 1px solid #aaaa;
+    border-radius: 6px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+::ng-deep .manage-menu .mat-menu-content {
+  display: flex;
+  flex-direction: column;
+}

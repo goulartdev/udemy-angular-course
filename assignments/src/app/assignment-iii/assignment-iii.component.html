@@ -1,0 +1,19 @@
+<ol class="instructions">
+  <li>Add a button which says 'Display Details'</li>
+  <li>Add a paragraph with any content of your choice</li>
+  <li>Toggle the displaying of that paragraph with the button created in the first step</li>
+  <li>Log all buttons clicks in an array and output that array below the secret paragraph</li>
+  <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color</li>
+</ol>
+<hr>
+<section class="resolution">
+  <div class="display">
+    <button (click)="toggleVisibility()">{{ shouldShow ? 'Hide' : 'Show' }}</button>
+    <p *ngIf="shouldShow">supersecretpassword</p>
+  </div>
+  <ul class="logs">
+    <li *ngFor="let log of logs; index as i" [ngStyle]="{ backgroundColor: i < 5 ? '#5cbfdd' : 'transparent'}">
+      [{{ log.when | date:'MMM d, y, hh:mm:ss'}}] {{ log.action }}
+    </li>
+  </ul>
+</section>
