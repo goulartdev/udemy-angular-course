@@ -1,8 +1,11 @@
 :host {
-  display: flex;
-  flex-direction: row;
+  max-width: 1200px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 24rem 1fr;
+  gap: 1rem;
+}
 
-  app-recipe-list {
-    width: 16rem;
-  }
+button {
+  width: 100%;
 }

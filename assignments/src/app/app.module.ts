@@ -14,6 +14,7 @@ import {
   EvenComponent,
   OddComponent,
 } from './assignment-iv';
+import { AssignmentVComponent, ActiveUsersComponent, InactiveUsersComponent } from './assignment-v';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,9 @@ import {
     GameControlComponent,
     EvenComponent,
     OddComponent,
+    AssignmentVComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
   ],
   imports: [BrowserModule, CommonModule, FormsModule],
   providers: [],

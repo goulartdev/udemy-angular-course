@@ -1,16 +1,30 @@
-:host mat-card {
-  width: 20rem;
+@use '@angular/material' as mat;
+
+@import "/src/assets/styles/theme.scss";
+
+:host {
+  display: block;
+}
+
+mat-card {
   display: flex;
   flex-direction: row;
-  padding: 0.6rem;
+  padding: 0;
+  border-radius: 0;
 
   div {
+    margin: 0.6rem;
     width: 100%;
   }
 
   img {
-   width: 8rem;
-   object-fit: cover; 
+    width: 8rem;
+    object-fit: cover; 
+    // border-radius: 0 4px 4px 0;
   }
 
+  &:hover {
+    cursor: pointer;
+    background-color: mat.get-color-from-palette($gray, 700);
+  }
 }

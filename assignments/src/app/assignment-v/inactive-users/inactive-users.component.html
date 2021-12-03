@@ -1,0 +1,8 @@
+<h3>Inactive Users</h3>
+<hr/>
+<ul class="user-list">
+  <li *ngFor="let username of users">
+    <span class="username">{{ username }}</span>
+    <a class="action" href="#" (click)="setToActive(username)">Set to active</a>
+  </li>
+</ul>

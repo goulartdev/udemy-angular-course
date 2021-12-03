@@ -2,8 +2,8 @@
   <span class="title">Cook'n'Roll</span>
   <span class="spacer"></span>
   <nav>
-    <a mat-flat-button color="primary" href="#" role="button">Recipes</a>
-    <a mat-flat-button color="primary" href="#" role="button">Shopping List</a>
+    <a mat-flat-button color="primary" href="#" role="button" (click)="navigateTo('recipes')">Recipes</a>
+    <a mat-flat-button color="primary" href="#" role="button" (click)="navigateTo('shopping_list')">Shopping List</a>
     <a mat-flat-button color="primary" href="#" role="button" [matMenuTriggerFor]="manageMenu">Manage</a>
     <mat-menu #manageMenu="matMenu" class="manage-menu">
       <a mat-flat-button href="#" role="button">Save Data</a>
