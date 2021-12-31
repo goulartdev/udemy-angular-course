@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { AppRountingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { AssignmentIComponent, MessageComponent } from './assignment-i';
 import { AssignmentIIComponent } from './assignment-ii';
 import { AssignmentIIIComponent } from './assignment-iii';
@@ -33,7 +33,7 @@ import { AssignmentVIComponent } from './assignment-vi/assignment-vi.component';
     InactiveUsersComponent,
     AssignmentVIComponent,
   ],
-  imports: [BrowserModule, CommonModule, FormsModule],
+  imports: [AppRountingModule, BrowserModule, CommonModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
