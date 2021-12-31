@@ -1,0 +1,18 @@
+<section class="image-panel">
+  <img [src]="recipe.imageUrl" [alt]="recipe.name">
+</section>
+<h1>{{ recipe.name }}</h1>  
+<section class="recipe-detail">
+  <div class="recipe-detail__instructions">
+    <p>{{ recipe.description }}</p>
+  </div>
+  <div class="recipe-detail__ingredients">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>Some ingredient 1</li>
+      <li>Some ingredient 2</li>
+      <li>Some ingredient 3</li>
+      <li>Some ingredient 4</li>
+    </ul>
+  </div>
+</section>

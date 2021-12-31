@@ -1,5 +1,0 @@
-<aside>
-  <button mat-flat-button color="primary">New Recipe</button>
-  <app-recipe-list (onSelectRecipe)="showRecipe($event)"></app-recipe-list>
-</aside>
-<app-recipe-detail *ngIf="selectedRecipe" [recipe]="selectedRecipe"></app-recipe-detail>

@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+@import "/src/assets/styles/theme.scss";
+
+:host {
+  display: block;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  border-radius: 0;
+
+  div {
+    margin: 0.6rem;
+    width: 100%;
+  }
+
+  img {
+    width: 8rem;
+    object-fit: cover;
+  }
+
+  &:hover,
+  &.active {
+    cursor: pointer;
+    background-color: mat.get-color-from-palette($gray, 700);
+  }
+}

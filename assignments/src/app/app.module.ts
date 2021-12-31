@@ -15,6 +15,7 @@ import {
   OddComponent,
 } from './assignment-iv';
 import { AssignmentVComponent, ActiveUsersComponent, InactiveUsersComponent } from './assignment-v';
+import { AssignmentVIComponent } from './assignment-vi/assignment-vi.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AssignmentVComponent, ActiveUsersComponent, InactiveUsersComponent } fr
     AssignmentVComponent,
     ActiveUsersComponent,
     InactiveUsersComponent,
+    AssignmentVIComponent,
   ],
   imports: [BrowserModule, CommonModule, FormsModule],
   providers: [],
