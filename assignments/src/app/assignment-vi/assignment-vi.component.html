@@ -7,7 +7,7 @@
     <li>A submit button</li>
   </ol>
   
-  <p>When submitted, it should:</p>
+  <p>It should:</p>
   <ol>
     <li>Display a warning messagem if the form is invalid AND was touched. </li>
     <li>Display a warning message below each input if it's invalid.</li>
@@ -18,15 +18,14 @@
 <hr>
 <section class="resolution">
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <p class="error" *ngIf="f.touched && f.invalid">There is incorrect information!</p>
     <div class="input-group">
       <label for="email">E-Mail</label>
       <input type="text" name="email" ngModel required email #email="ngModel">
       <p *ngIf="email.touched && email.invalid">Invalid E-mail!</p>
     </div>
     <div class="input-group">
-      <label for="subscription">Subscription</label>
-      <select name="subscription" required [ngModel]="defaultSubscription" #subsc="ngModel">
+      <label for="type">Subscription</label>
+      <select name="type" required [ngModel]="defaultSubscription" #subsc="ngModel">
         <option *ngFor="let type of subscriptions" value="{{ type }}">{{ type | titlecase }}</option>
       </select>
       <p *ngIf="subsc.touched && subsc.invalid">Invalid subscription type!</p>
@@ -38,4 +37,8 @@
     </div>
     <button type="submit" [disabled]="f.invalid">Submit</button>
   </form>
+  <section id="subscription" *ngIf="subscription">
+    <span> E-Mail: {{ subscription.email }}</span>
+    <span> Subscription: {{ subscription.type }}</span>
+  </section>
 </section>

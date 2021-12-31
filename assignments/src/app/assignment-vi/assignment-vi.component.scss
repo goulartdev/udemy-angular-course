@@ -74,3 +74,13 @@ button {
     background-color: #626481;
   }
 }
+
+#subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
