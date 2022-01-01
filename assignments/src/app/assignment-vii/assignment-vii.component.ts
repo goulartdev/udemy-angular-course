@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { CustomValidators } from './custom-validators';
 
 interface Project {
   name: string,
@@ -27,22 +28,11 @@ export class AssignmentVIIComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      name: new FormControl(null, [Validators.required], this.isValidName ),
+      // name: new FormControl(null, [Validators.required, CustomValidators.invalidProjectName]),
+      name: new FormControl(null, [Validators.required], CustomValidators.asyncInvalidProjectName ),
       email: new FormControl(null, [Validators.required, Validators.email]),
       status: new FormControl(this.status[0], [Validators.required]),
     });
-  }
-
-  isValidName(control: AbstractControl): Promise<ValidationErrors | null> {
-    return new Promise<ValidationErrors | null>((resolve, reject) => {
-      setTimeout(() => {
-        if (typeof control.value === 'string' && control.value.toLowerCase() === 'test') {
-          resolve({ 'invalidProjectName': true });
-        } else {
-          resolve(null);
-        }
-      }, 1000);
-    })
   }
 
   showErrors(field: string): boolean {
