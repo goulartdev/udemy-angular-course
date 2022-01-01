@@ -1,0 +1,86 @@
+.instructions {
+  border: 2px solid #999;
+  border-radius: 6px;
+  padding: 0 20px;
+  li {
+    margin: 10px 0;
+  }
+}
+
+.resolution {
+  margin-top: 16px;
+}
+
+form {
+  .error {
+    border: 1px solid red;
+    background-color: #ffe0e0;
+    border-radius: 4px;
+    padding: 12px;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  gap: 2px;
+  
+  input, select {
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 28px;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    padding: 0 6px;
+    
+    &.ng-touched.ng-valid:not(:focus) {
+      border: 2px solid #4cbe68;
+    }
+
+    &.ng-touched.ng-invalid:not(:focus) {
+      border: 2px solid #eb1414;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid #4b55d3;
+    }
+  }
+  
+  p {
+    margin: 0;
+    margin-top: 2px;
+    color: #eb1414;
+  }
+
+}
+
+button {
+  height: 32px;
+  width: 120px;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #4b55d3;
+  color: #fff;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: #6067d4;
+  }
+  
+  &:disabled {
+    background-color: #626481;
+  }
+}
+
+#project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}

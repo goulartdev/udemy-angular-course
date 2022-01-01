@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AssignmentVIComponent } from './assignment-vi.component';
+import { AssignmentVIIComponent } from './assignment-vii.component';
 
 describe('AssignmentViComponent', () => {
-  let component: AssignmentVIComponent;
-  let fixture: ComponentFixture<AssignmentVIComponent>;
+  let component: AssignmentVIIComponent;
+  let fixture: ComponentFixture<AssignmentVIIComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AssignmentVIComponent ]
+      declarations: [ AssignmentVIIComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AssignmentVIComponent);
+    fixture = TestBed.createComponent(AssignmentVIIComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

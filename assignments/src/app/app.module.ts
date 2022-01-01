@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRountingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +15,8 @@ import {
   OddComponent,
 } from './assignment-iv';
 import { AssignmentVComponent, ActiveUsersComponent, InactiveUsersComponent } from './assignment-v';
-import { AssignmentVIComponent } from './assignment-vi/assignment-vi.component';
+import { AssignmentVIComponent } from './assignment-vi';
+import { AssignmentVIIComponent } from './assignment-vii';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,15 @@ import { AssignmentVIComponent } from './assignment-vi/assignment-vi.component';
     ActiveUsersComponent,
     InactiveUsersComponent,
     AssignmentVIComponent,
+    AssignmentVIIComponent,
   ],
-  imports: [AppRountingModule, BrowserModule, CommonModule, FormsModule],
+  imports: [
+    AppRountingModule, 
+    BrowserModule, 
+    CommonModule, 
+    FormsModule, 
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

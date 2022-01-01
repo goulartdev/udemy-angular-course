@@ -1,0 +1,44 @@
+<section  class="instructions">
+  <p>Create a form with the following Controls and Validators:</p>
+  <ol>
+    <li>Project Name (should not be empty)</li>
+    <li>Mail (should not be a empty string; should be a valid email)</li>
+    <li>Project Status (Stable, Critical, Finished)</li>
+    <li>Submit button</li>
+    <li>Project name should not be "Test" (should be async)</li>
+  </ol>
+  </section>
+<hr>
+<section class="resolution">
+  <form *ngIf="form" (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="input-group">
+      <label for="name">Project Name</label>
+      <input type="name" name="name" formControlName="name">
+      <div *ngIf="showErrors('name')">
+        <span *ngFor="let error of getErrorMessages('name')">{{ error }}</span>
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="email">E-Mail</label>
+      <input type="text" name="email" formControlName="email">
+      <div *ngIf="showErrors('email')">
+        <span *ngFor="let error of getErrorMessages('email')">{{ error }}</span>
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="status">Status</label>
+      <select name="status" formControlName="status">
+        <option *ngFor="let s of status" value="{{ s }}">{{ s | titlecase }}</option>
+      </select>
+      <div *ngIf="showErrors('status')">
+        <span *ngFor="let error of getErrorMessages('status')">{{ error }}</span>
+      </div>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+  <section id="project" *ngIf="project">
+    <span> Project name: {{ project.name }}</span>
+    <span> E-Mail: {{ project.email }}</span>
+    <span> Status: {{ project.status }}</span>
+  </section>
+</section>
