@@ -17,6 +17,7 @@ import {
 import { AssignmentVComponent, ActiveUsersComponent, InactiveUsersComponent } from './assignment-v';
 import { AssignmentVIComponent } from './assignment-vi';
 import { AssignmentVIIComponent } from './assignment-vii';
+import { AssignmentVIIIComponent, Reverse, Sort } from './assignment-viii';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,9 @@ import { AssignmentVIIComponent } from './assignment-vii';
     InactiveUsersComponent,
     AssignmentVIComponent,
     AssignmentVIIComponent,
+    AssignmentVIIIComponent,
+    Reverse,
+    Sort,
   ],
   imports: [
     AppRountingModule, 

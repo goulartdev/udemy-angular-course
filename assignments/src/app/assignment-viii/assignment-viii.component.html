@@ -1,0 +1,36 @@
+<h2>Servers status</h2>
+<hr>
+<form [formGroup]="form">
+  <button (click)="refresh()">Refresh</button>
+
+  <div class="sorting">
+    <span>Sorting: </span>
+    <div class="sorting-options">
+      <select name="sorting-field" id="sorting-field" formControlName="sortKey">
+        <option *ngFor="let key of keys" [ngValue]="key">{{ key | titlecase }}</option>
+      </select>
+      
+      <select name="sorting-order" id="sorting-order" formControlName="sortOrder">
+        <option ngValue="asc">Ascending</option>
+        <option ngValue="desc">Descending</option>
+      </select>
+    </div>
+  </div>
+</form>
+<ul>
+  <ol *ngFor="let server of servers | sort:form.value.sortKey:form.value.sortOrder" class="status-{{ server.status | lowercase }}">
+    <div class="server-info">
+      <strong>{{ server.name }}</strong> | 
+      {{ server.instanceType | uppercase | reverse }} | 
+      {{ server.started | date:'fullDate' | uppercase }}
+    </div>
+    
+    <span class="badge">{{ server.status }}</span>
+
+    <div class="actions">
+      <button *ngIf="server.status === 'offline'" (click)="start(server)">Start</button>
+      <button *ngIf="server.status !== 'offline'" (click)="stop(server)">Stop</button>
+    </div>
+
+  </ol>
+</ul>

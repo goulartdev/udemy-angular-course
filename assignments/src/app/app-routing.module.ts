@@ -8,6 +8,7 @@ import { AssignmentIVComponent } from './assignment-iv';
 import { AssignmentVComponent } from './assignment-v';
 import { AssignmentVIComponent } from './assignment-vi';
 import { AssignmentVIIComponent } from './assignment-vii';
+import { AssignmentVIIIComponent } from './assignment-viii';
 
 const routes: Routes = [
   { path: 'assignment-i', component: AssignmentIComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'assignment-v', component: AssignmentVComponent },
   { path: 'assignment-vi', component: AssignmentVIComponent },
   { path: 'assignment-vii', component: AssignmentVIIComponent },
+  { path: 'assignment-viii', component: AssignmentVIIIComponent },
 ];
 
 @NgModule({
